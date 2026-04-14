@@ -1,0 +1,142 @@
+[
+    {
+        "lista": "Tipos de Infraestructura",
+        "descripcion": "Esquema de conceptos agrupando tipos de elementos de infraestructura. Incluye clasificación jerárquica de equipamientos (instalaciones deportivas, culturales, sanitarias, educativas) y elementos urbanos (mobiliario, señalización, gestión de residuos).",
+        "dominio": "Infraestructura Urbana",
+        "vocabularios": ["edintinf"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-infraestructura/blob/main/kos/skos-InfrastructureType.ttl"
+    },
+    {
+        "lista": "Tipos de Servicio Público",
+        "descripcion": "Esquema de conceptos agrupando tipos de servicios públicos prestados en un equipamiento. Incluye servicios complementarios (wifi, cafetería) y servicios de centros de salud (asistencia médica, programas de salud, fisioterapia).",
+        "dominio": "Infraestructura Urbana",
+        "vocabularios": ["edintinf"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-infraestructura/blob/main/kos/skos-PublicService.ttl"
+    },
+    {
+        "lista": "Tipos de Actividad Regular",
+        "descripcion": "Esquema de conceptos agrupando tipos de actividades que se ofrecen regularmente en un equipamiento. Especializado en actividades de centros culturales (exposiciones, conciertos, teatro, talleres).",
+        "dominio": "Infraestructura Urbana",
+        "vocabularios": ["edintinf"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-infraestructura/blob/main/kos/skos-RegularActivity.ttl"
+    },
+    {
+        "lista": "Tipos de Rol",
+        "descripcion": "Esquema de conceptos agrupando tipos de roles de gestión que ejerce una organización sobre un elemento de la infraestructura. Incluye servicios básicos, seguridad, recursos humanos y mantenimiento.",
+        "dominio": "Infraestructura Urbana",
+        "vocabularios": ["edintinf"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-infraestructura/blob/main/kos/skos-RoleType.ttl"
+    },
+    {
+        "lista": "Tipos de Violación de Acceso",
+        "descripcion": "Esquema de conceptos agrupando tipos de violaciones de acceso de personas y vehículos. Clasificación por gravedad (leve, grave, muy grave) y tipos específicos (acceso no autorizado a zonas de bajas emisiones o peatonales).",
+        "dominio": "Infraestructura Urbana",
+        "vocabularios": ["edintinf"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-infraestructura/blob/main/kos/skos-ViolationType.ttl"
+    },
+    {
+        "lista": "Tipos de Vehículo",
+        "descripcion": "Esquema de conceptos agrupando tipos de vehículos. Incluye turismos, autobuses, camiones, furgonetas, cuatriciclos, todoterrenos, vehículos articulados, vehículos adaptados PMR, vehículos vivienda, ambulancias y vehículos mixtos.",
+        "dominio": "Transporte",
+        "vocabularios": ["edintveh"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-censovehiculos/blob/main/kos/skos-VehicleType.ttl"
+    },
+    {
+        "lista": "Tipos de Propulsión de Vehículo",
+        "descripcion": "Esquema de conceptos agrupando tipos de propulsión de vehículos. Incluye gasolina sin plomo, diésel, gas butano, GLP, gas natural comprimido/licuado, eléctrico, híbrido enchufable/no enchufable, y otros.",
+        "dominio": "Transporte",
+        "vocabularios": ["edintveh"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-censovehiculos/blob/main/kos/skos-VehiclePropulsionType.ttl"
+    },
+    {
+        "lista": "Tipos de Distintivo Medioambiental",
+        "descripcion": "Esquema de conceptos agrupando tipos de distintivos medioambientales de vehículos. Clasificación oficial española: Eco, B, C, Cero Emisiones, y Sin distintivo.",
+        "dominio": "Transporte",
+        "vocabularios": ["edintveh"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-censovehiculos/blob/main/kos/skos-VehicleEnvironmentalBadge.ttl"
+    },
+    {
+        "lista": "Tipos de Autorización de Vehículo",
+        "descripcion": "Esquema de conceptos agrupando tipos de autorización de vehículos. Incluye residentes, comercial-industrial, temporal, taller/garaje, servicios sanitarios y servicios esenciales.",
+        "dominio": "Transporte",
+        "vocabularios": ["edintveh"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-censovehiculos/blob/main/kos/skos-VehiclePermitType.ttl"
+    },
+    {
+        "lista": "Estados de Autorización de Vehículo",
+        "descripcion": "Esquema de conceptos agrupando estados de autorización de vehículos. Estados: Activo, Baja, Rechazado y En trámite.",
+        "dominio": "Transporte",
+        "vocabularios": ["edintveh"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-censovehiculos/blob/main/kos/skos-VehiclePermitStatus.ttl"
+    },
+    {
+        "lista": "Periodicidades de Autorización de Vehículo",
+        "descripcion": "Esquema de conceptos agrupando periodicidades de autorización de vehículos. Periodicidades: Anual y Mensual.",
+        "dominio": "Transporte",
+        "vocabularios": ["edintveh"],
+        "enlace": "https://github.com/oeg-upm/edint-ontologia-censovehiculos/blob/main/kos/skos-VehiclePermitPeriodicity.ttl"
+    },
+    {
+        "lista": "Estados de Instalación Fotovoltaica",
+        "descripcion": "Esquema de conceptos agrupando tipos de estado de las instalaciones fotovoltaicas. Estados: Operativo, Fuera de servicio y Parcial.",
+        "dominio": "Energía",
+        "vocabularios": ["edintfotov"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/blob/main/kos/skos-PhotovoltaicSystemStatus.ttl"
+    },
+    {
+        "lista": "Tipos de Uso de Instalación Fotovoltaica",
+        "descripcion": "Esquema de conceptos agrupando tipos de uso de la instalación fotovoltaica. Usos: Conectado a la red (Grid), Autónomo (Stand-alone) e Híbrido.",
+        "dominio": "Energía",
+        "vocabularios": ["edintfotov"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/blob/main/kos/skos-PhotovoltaicSystemUsageType.ttl"
+    },
+    {
+        "lista": "Tipos de Medidor",
+        "descripcion": "Esquema de conceptos agrupando tipos de medidores utilizados para medir el consumo de suministros. Tipos: Externo, Procesado y Telemedida.",
+        "dominio": "Energía",
+        "vocabularios": ["edintsum"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro/blob/main/kos/skos-MeterType.ttl"
+    },
+    {
+        "lista": "Tipos de Suministro",
+        "descripcion": "Esquema de conceptos agrupando tipos de suministros a los elementos de la infraestructura de un municipio. Incluye energía (activa, reactiva) y gas.",
+        "dominio": "Energía",
+        "vocabularios": ["edintsum"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro/blob/main/kos/skos-UtilityType.ttl"
+    },
+    {
+        "lista": "Tipos de Emisor de Ruido Predominante",
+        "descripcion": "Esquema de conceptos que agrupa tipos de emisores de ruido o vibración basado en el artículo 12.2 de la Ley 37/2003 del Ruido. Incluye vehículos, ferrocarriles, aeronaves, industrias, infraestructuras y actividades comerciales/deportivas.",
+        "dominio": "Medio Ambiente",
+        "vocabularios": ["edintacus"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/blob/main/kos/skos-EmitterPredominantType.ttl"
+    },
+    {
+        "lista": "Tipos de Índice de Ruido",
+        "descripcion": "Esquema de conceptos que agrupa tipos de índice de ruido o vibración. Incluye niveles equivalentes (LAeq, LAeq24), niveles estadísticos (LAS01, LAS10, LAS50, LAS90, LAS99) e índices de vibración (LAw).",
+        "dominio": "Medio Ambiente",
+        "vocabularios": ["edintacus"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/blob/main/kos/skos-NoiseRateType.ttl"
+    },
+    {
+        "lista": "Intervalos de Referencia",
+        "descripcion": "Esquema de conceptos que agrupa tipos de periodos de medición para observaciones de calidad acústica. Periodos: T (total), D (día), E (tarde), N (noche).",
+        "dominio": "Medio Ambiente",
+        "vocabularios": ["edintacus"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/blob/main/kos/skos-ReferenceInterval.ttl"
+    },
+    {
+        "lista": "Variables de Sensor",
+        "descripcion": "Esquema de conceptos agrupando magnitudes medidas por sensores en entornos urbanos. Vocabulario jerárquico de propiedades físicas, químicas y acústicas (meteorológicas, calidad del aire, acústicas, agua, suelo, tráfico, energía, residuos) con unidades QUDT asociadas.",
+        "dominio": "Medio Ambiente",
+        "vocabularios": ["edintmed"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/blob/main/kos/sensor-variables.ttl"
+    },
+    {
+        "lista": "Características de Interés",
+        "descripcion": "Esquema de conceptos agrupando características de interés observables por sensores según la ontología SOSA. Vocabulario de features of interest con enlaces directos a propiedades observables en el esquema SensorVariables (aire, suelo, calzada, viento, precipitación, radiación, entorno acústico, agua potable).",
+        "dominio": "Medio Ambiente",
+        "vocabularios": ["edintmed"],
+        "enlace": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/blob/main/kos/feature-of-interest.ttl"
+    }
+]
