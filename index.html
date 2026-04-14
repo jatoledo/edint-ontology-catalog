@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Ontologías</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --edint-blue: #1E1D5B;
+            --edint-blue-light: #2A287A;
+            --edint-yellow: #FFBD15;
+            --edint-bg-light: #F9F9F9;
+            --edint-white: #FFFFFF;
+            --text-dark: #1d1d1f;
+            --text-muted: #666666;
+            --border-color: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--edint-bg-light);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        .main-header {
+            background-color: var(--edint-blue);
+            padding: 0 5%;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--edint-white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu { display: flex; height: 100%; }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--edint-white);
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            position: relative;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+        }
+
+        .nav-link:hover, .nav-link.active { color: var(--edint-yellow); }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--edint-yellow);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(135deg, var(--edint-blue) 0%, var(--edint-blue-light) 100%);
+            color: var(--edint-white);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            margin: 0 0 15px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* --- CONTAINER & SECTIONS --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            flex: 1;
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .content-section.active-section {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-box {
+            background: var(--edint-white);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            padding: 50px;
+        }
+
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            color: var(--edint-blue);
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* --- SECCIÓN DESCRIPCIÓN --- */
+        .description-content h2 {
+            border-bottom: 3px solid var(--edint-yellow);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .description-content h3 {
+            font-family: 'Inter', sans-serif;
+            color: var(--edint-blue-light);
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .description-content h4 {
+            font-family: 'Inter', sans-serif;
+            color: var(--edint-blue);
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .description-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .description-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .description-content ul li {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background-color: var(--edint-bg-light);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--edint-yellow);
+        }
+
+        .description-content ul li i {
+            color: var(--edint-blue);
+            margin-top: 3px;
+            font-size: 18px;
+        }
+
+        /* --- TABLA --- */
+        .table-wrapper {
+            overflow-x: auto;
+            background: var(--edint-white);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1000px;
+        }
+
+        thead tr { background-color: var(--edint-blue); }
+
+        th {
+            color: white;
+            text-align: left;
+            padding: 20px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 15px;
+            vertical-align: top;
+            color: var(--text-dark);
+        }
+
+        tbody tr { transition: background-color 0.2s ease; }
+        tbody tr:nth-child(even) { background-color: #fafafa; }
+        tbody tr:hover { background-color: #f1f5f9; }
+
+        .vocab-title { font-weight: 700; color: var(--edint-blue); font-size: 16px; display: block; margin-bottom: 5px; }
+        .vocab-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; display: block; }
+
+        .serialization-container, .links-group {
+            display: block;
+        }
+
+        .badge {
+            display: block;
+            background: var(--edint-blue-light);
+            color: white;
+            padding: 6px 0;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            width: 85px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .badge:last-child { margin-bottom: 0; }
+        .badge:hover { background: var(--edint-blue); }
+
+        .badge-domain {
+            background: var(--edint-yellow);
+            color: var(--edint-blue);
+            width: 140px;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* --- SOLUCIÓN: LA COLUMNA RECURSOS YA NO SE APRIETA --- */
+        .links-group a {
+            color: var(--edint-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 8px;
+            white-space: nowrap; /* Impide que el texto salte de línea, obligando a la columna a respetar su espacio */
+        }
+        .links-group a:last-child { margin-bottom: 0; }
+        .links-group a i {
+            margin-right: 6px;
+            width: 16px;
+            text-align: center;
+        }
+        .links-group a:hover { color: var(--edint-yellow); text-decoration: underline; }
+
+        /* --- FOOTER --- */
+        .main-footer {
+            background-color: var(--edint-blue);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .footer-logo {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            background-color: var(--edint-white);
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">Catálogo de Ontologías</div>
+        <nav class="nav-menu">
+            <a href="#descripcion" class="nav-link active">Descripción</a>
+            <a href="#catalogo" class="nav-link">Catálogo de Ontologías</a>
+            <a href="#skos" class="nav-link">Listas SKOS</a>
+            <a href="#reutilizacion" class="nav-link">Reutilización</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explora nuestro Vocabulario</h1>
+        <p>Accede a la red de modelos de datos semánticos estandarizados diseñados para la interoperabilidad y la publicación de datos abiertos.</p>
+    </section>
+
+    <div class="container">
+
+        <div id="descripcion" class="content-section active-section">
+            <div class="section-box description-content">
+                <h2 class="section-title">Descripción del Proyecto</h2>
+                <p>En un momento decisivo para la evolución hacia territorios más inteligentes, conectados y sostenibles, el proyecto <strong>EDINT (Espacios de Datos para las Infraestructuras Urbanas Inteligentes)</strong> se configura como una iniciativa estratégica para la gestión, compartición y aprovechamiento de los datos urbanos. Su finalidad es facilitar un marco común que permita transformar la información generada en los municipios en conocimiento útil para la toma de decisiones, la mejora de los servicios y la generación de nuevas oportunidades de innovación.</p>
+                <p>Impulsado y liderado por la Federación Española de Municipios y Provincias (FEMP), y financiado por el Plan de Recuperación, Transformación y Resiliencia, en colaboración con el Ministerio para la Transformación Digital y de la Función Pública, a través de Red.es, EDINT parte de la idea de que la colaboración es un elemento esencial para activar todo el potencial de los datos urbanos. En este contexto, el proyecto promueve un ecosistema de cooperación entre administraciones públicas, empresas, universidades y ciudadanía, con el fin de impulsar la nueva economía del dato en el ámbito local.</p>
+                <p>La iniciativa EDINT se apoya en el estudio y análisis de datos compartidos para actuar sobre tres grandes ámbitos de impacto: la mejora de los servicios públicos, el fomento de la innovación y del empleo local, y el impulso de la colaboración entre los diferentes agentes del territorio.</p>
+                <h3>Objetivos</h3>
+                <p>El objetivo de esta actuación es la publicación de un catálogo de ontologías y vocabularios que facilite la interoperabilidad semántica en el ámbito de las infraestructuras urbanas inteligentes. Este catálogo busca ofrecer modelos bien definidos, documentados y reutilizables, que sirvan de referencia para la representación, integración y explotación de datos urbanos en distintos contextos tecnológicos y organizativos.</p>
+                <h3>Actuaciones</h3>
+                <p>Dentro de la línea de trabajo de interoperabilidad semántica y gobernanza del dato, se desarrolla la siguiente actuación concreta dentro del proyecto:</p>
+                <h4>Desarrollo de ontologías y modelos de conocimiento</h4>
+                <p>El objetivo de esta actuación es definir y publicar ontologías y vocabularios que permitan estructurar de forma homogénea la información asociada a las infraestructuras urbanas inteligentes y a los espacios de datos vinculados al ámbito municipal.</p>
+                <p>El proceso seguido para su desarrollo parte del análisis de los dominios de información relevantes en el contexto urbano, así como de la identificación de necesidades de intercambio, integración y reutilización de datos entre los distintos actores implicados. A partir de este estudio, se definen los modelos conceptuales y semánticos necesarios para representar de manera clara y coherente los datos, favoreciendo su comprensión, interoperabilidad y uso compartido. Finalmente, estos modelos se publican en formatos estándar y acompañados de la documentación necesaria para facilitar su adopción.</p>
+                <p>Para cada ontología o vocabulario se incorpora además información descriptiva, documentación técnica y ejemplos de uso, con el propósito de facilitar su comprensión, replicación e implementación por parte de otras entidades.</p>
+                <h3>Qué buscamos</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i><span>Publicar ontologías y vocabularios que contribuyan a establecer un marco común para la gestión semántica de los datos urbanos.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Facilitar la interoperabilidad entre sistemas, organizaciones y espacios de datos vinculados a las infraestructuras urbanas inteligentes.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Incluir documentación y ejemplos que favorezcan una comprensión rápida y una adopción efectiva de los modelos publicados.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Ofrecer un catálogo de referencia que impulse la reutilización, la colaboración y el desarrollo de nuevos servicios basados en datos.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="catalogo" class="content-section">
+            <h2 class="section-title">Catálogo</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Vocabulario</th>
+                            <th style="width: 35%;">Descripción</th>
+                            <th>Prefijo</th>
+                            <th>Formatos</th>
+                            <th>Dominio</th>
+                            <th style="min-width: 150px;">Recursos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="catalogo-tbody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="skos" class="content-section">
+            <h2 class="section-title">Catálogo de Listas SKOS</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Lista SKOS</th>
+                            <th style="width: 35%;">Descripción</th>
+                            <th>Dominio</th>
+                            <th>Vocabulario que la usa</th>
+                            <th style="min-width: 150px;">Enlaces</th>
+                        </tr>
+                    </thead>
+                    <tbody id="skos-tbody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="reutilizacion" class="content-section">
+            <div class="section-box">
+                <h2 class="section-title">Vocabularios Reutilizados</h2>
+                <p>Contenido sobre vocabularios reutilizados próximamente...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <img src="EDINT_UE_V-Color.png" alt="Logo EDINT - Unión Europea" class="footer-logo">
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- LÓGICA DE LAS PESTAÑAS ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.content-section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    sections.forEach(s => s.classList.remove('active-section'));
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active-section');
+                    }
+                });
+            });
+
+            // --- FUNCIÓN PARA CARGAR LOS JSON EXTERNOS ---
+            async function cargarDatos() {
+                try {
+                    // 1. CARGAR Y RENDERIZAR ONTOLOGÍAS
+                    const resOntologias = await fetch('./Ontology/ontologias.json');
+                    const ontologiasData = await resOntologias.json();
+
+                    const catalogoTbody = document.getElementById('catalogo-tbody');
+                    ontologiasData.forEach(item => {
+                        const formatosHTML = item.formatos.map(f => `<a href="${f.url}" class="badge">${f.nombre}</a>`).join('');
+                        const recursosHTML = item.recursos.map(r => `<a href="${r.url}"><i class="${r.icon}"></i> ${r.nombre}</a>`).join('');
+
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td><span class="vocab-title">${item.vocabulario}</span></td>
+                            <td><span class="vocab-desc">${item.descripcion}</span></td>
+                            <td><strong>${item.prefijo}</strong></td>
+                            <td><div class="serialization-container">${formatosHTML}</div></td>
+                            <td><span class="badge-domain">${item.dominio}</span></td>
+                            <td><div class="links-group">${recursosHTML}</div></td>
+                        `;
+                        catalogoTbody.appendChild(tr);
+                    });
+
+                    // 2. CARGAR Y RENDERIZAR LISTAS SKOS
+                    const resSkos = await fetch('./skos/skos.json');
+                    const skosData = await resSkos.json();
+
+                    const skosTbody = document.getElementById('skos-tbody');
+                    skosData.forEach(item => {
+                        // Se unen los vocabularios con comas en texto plano
+                        const vocabulariosText = item.vocabularios.join(', ');
+
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td><span class="vocab-title">${item.lista}</span></td>
+                            <td><span class="vocab-desc">${item.descripcion}</span></td>
+                            <td><span class="badge-domain">${item.dominio}</span></td>
+                            <td>${vocabulariosText}</td>
+                            <td>
+                                <div class="links-group">
+                                    <a href="${item.enlace}"><i class="fab fa-github"></i> Repositorio</a>
+                                </div>
+                            </td>
+                        `;
+                        skosTbody.appendChild(tr);
+                    });
+
+                } catch (error) {
+                    console.error("Error al cargar los archivos JSON:", error);
+                }
+            }
+
+            // Ejecutamos la función de carga
+            cargarDatos();
+        });
+    </script>
+
+</body>
+</html>
