@@ -446,7 +446,7 @@
             async function cargarDatos() {
                 try {
                     // 1. CARGAR Y RENDERIZAR ONTOLOGÍAS
-                    const resOntologias = await fetch('./Ontology/ontologias.json');
+                    const resOntologias = await fetch('./ontology/ontologias.json');
                     const ontologiasData = await resOntologias.json();
 
                     const catalogoTbody = document.getElementById('catalogo-tbody');
