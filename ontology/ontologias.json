@@ -1,159 +1,302 @@
 [
-    {
-        "vocabulario": "Ontología de Infraestructura",
-        "descripcion": "Ontología para la representación de la infraestructura pública de un municipio. Incluye centros educativos, sociales y culturales, deportivos, aparcamientos y estaciones de bicicletas compartidas.",
-        "prefijo": "edintinf",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Infraestructura Urbana",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/telefonicasc/edint-ontologia-infraestructura", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/telefonicasc/edint-ontologia-infraestructura/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/telefonicasc/edint-ontologia-infraestructura/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Zonas Regulatorias",
-        "descripcion": "Ontología para la representación de zonas regulatorias en el contexto de la movilidad inteligente y la gestión urbana. Define ZBE, Carga y Descarga, y otras entidades funcionales que se superponen a la trama urbana.",
-        "prefijo": "edintzone",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Movilidad Urbana",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/telefonicasc/edint-ontologia-zonaregulatoria", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/telefonicasc/edint-ontologia-zonaregulatoria/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/telefonicasc/edint-ontologia-zonaregulatoria/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Censo de Vehículos",
-        "descripcion": "Ontología para la representación del censo o registro de vehículos que gestionan las entidades locales para cobro de IVTM y gestión de movilidad (permisos de aparcamiento, acceso a zonas específicas).",
-        "prefijo": "edintveh",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Transporte",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/telefonicasc/edint-ontologia-censovehiculos", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/telefonicasc/edint-ontologia-censovehiculos/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/telefonicasc/edint-ontologia-censovehiculos/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Aparcamiento",
-        "descripcion": "Ontología para la representación de datos de aparcamientos públicos y privados en un municipio. Incluye aparcamientos dentro y fuera de la vía pública, nivel de ocupación, plazas según tipo de permiso y tipo de vehículo.",
-        "prefijo": "edintinfp",
-        "formatos": [
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Transporte",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-aparcamiento", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-aparcamiento/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-aparcamiento/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Instalación Fotovoltaica",
-        "descripcion": "Ontología para la representación de instalaciones fotovoltaicas en elementos de infraestructura municipal y la medición de generación, consumo, acumulación y vertido de electricidad en la red.",
-        "prefijo": "edintfotov",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Energía",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Suministro",
-        "descripcion": "Ontología para la representación de activos energéticos y la monitorización de su consumo y producción de energía. Cubre suministros de electricidad, gas, agua y otros recursos en elementos de infraestructura municipal.",
-        "prefijo": "edintsum",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Energía",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Contaminación Acústica",
-        "descripcion": "Extensión de la ontología de Sensores Medioambientales para la representación de datos de contaminación acústica. Especialización para observaciones de ruido urbano.",
-        "prefijo": "edintacus",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Medio Ambiente",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Calidad del Aire",
-        "descripcion": "Ontología para la representación de datos de calidad del aire. Reutiliza el patrón de Sensores Medioambientales para representar estaciones, sensores y observaciones de calidad del aire (NO2, O3, PM10, etc.).",
-        "prefijo": "edintmed",
-        "formatos": [
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Medio Ambiente",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-calidad-aire", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-calidad-aire/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-calidad-aire/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Climatología",
-        "descripcion": "Ontología para la representación de datos climatológicos. Ejemplos de uso concretos de la ontología de Sensores Medioambientales para magnitudes climatológicas.",
-        "prefijo": "edintmed",
-        "formatos": [
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Medio Ambiente",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-climatologia", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-climatologia/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-climatologia/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    },
-    {
-        "vocabulario": "Ontología de Sensores Medioambientales",
-        "descripcion": "Ontología para la representación de sensores ambientales urbanos y de las observaciones de clima, calidad ambiental y ruido. Extensión modular de SOSA y GeoSPARQL para infraestructuras de medición física.",
-        "prefijo": "edintmed",
-        "formatos": [
-            { "nombre": "RDF+XML", "url": "#" },
-            { "nombre": "HTML", "url": "#" },
-            { "nombre": "TURTLE", "url": "#" }
-        ],
-        "dominio": "Medio Ambiente",
-        "recursos": [
-            { "nombre": "Repositorio", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente", "icon": "fab fa-github" },
-            { "nombre": "Issues", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/issues", "icon": "fas fa-bug" },
-            { "nombre": "Requisitos", "url": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/tree/main/requirements", "icon": "fas fa-file-alt" }
-        ]
-    }
+  {
+    "vocabulario": "Ontología de Infraestructura",
+    "descripcion": "Ontología para la representación de la infraestructura pública de un municipio. Incluye centros educativos, sociales y culturales, deportivos, aparcamientos y estaciones de bicicletas compartidas.",
+    "prefijo": "edintinf",
+    "documentacion": "https://raw.githack.com/telefonicasc/edint-ontologia-infraestructura/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/telefonicasc/edint-ontologia-infraestructura/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Infraestructura Urbana",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/telefonicasc/edint-ontologia-infraestructura",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/telefonicasc/edint-ontologia-infraestructura/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/telefonicasc/edint-ontologia-infraestructura/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Zonas Regulatorias",
+    "descripcion": "Ontología para la representación de zonas regulatorias en el contexto de la movilidad inteligente y la gestión urbana. Define ZBE, Carga y Descarga, y otras entidades funcionales que se superponen a la trama urbana.",
+    "prefijo": "edintzone",
+    "documentacion": "https://raw.githack.com/telefonicasc/edint-ontologia-zonaregulatoria/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/telefonicasc/edint-ontologia-zonaregulatoria/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Movilidad Urbana",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/telefonicasc/edint-ontologia-zonaregulatoria",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/telefonicasc/edint-ontologia-zonaregulatoria/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/telefonicasc/edint-ontologia-zonaregulatoria/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Censo de Vehículos",
+    "descripcion": "Ontología para la representación del censo o registro de vehículos que gestionan las entidades locales para cobro de IVTM y gestión de movilidad (permisos de aparcamiento, acceso a zonas específicas).",
+    "prefijo": "edintveh",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-censovehiculos/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-censovehiculos/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Transporte",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/telefonicasc/edint-ontologia-censovehiculos",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/telefonicasc/edint-ontologia-censovehiculos/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/telefonicasc/edint-ontologia-censovehiculos/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Aparcamiento",
+    "descripcion": "Ontología para la representación de datos de aparcamientos públicos y privados en un municipio. Incluye aparcamientos dentro y fuera de la vía pública, nivel de ocupación, plazas según tipo de permiso y tipo de vehículo.",
+    "prefijo": "edintinfp",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-aparcamiento/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-aparcamiento/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Transporte",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-aparcamiento",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-aparcamiento/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-aparcamiento/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Instalación Fotovoltaica",
+    "descripcion": "Ontología para la representación de instalaciones fotovoltaicas en elementos de infraestructura municipal y la medición de generación, consumo, acumulación y vertido de electricidad en la red.",
+    "prefijo": "edintfotov",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Energía",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-fotovoltaica/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Suministro",
+    "descripcion": "Ontología para la representación de activos energéticos y la monitorización de su consumo y producción de energía. Cubre suministros de electricidad, gas, agua y otros recursos en elementos de infraestructura municipal.",
+    "prefijo": "edintsum",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-suministro/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-suministro/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Energía",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-suministro/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Contaminación Acústica",
+    "descripcion": "Extensión de la ontología de Sensores Medioambientales para la representación de datos de contaminación acústica. Especialización para observaciones de ruido urbano.",
+    "prefijo": "edintacus",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Medio Ambiente",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-contaminacion-acustica/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Calidad del Aire",
+    "descripcion": "Ontología para la representación de datos de calidad del aire. Reutiliza el patrón de Sensores Medioambientales para representar estaciones, sensores y observaciones de calidad del aire (NO2, O3, PM10, etc.).",
+    "prefijo": "edintmed",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-calidad-aire/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-calidad-aire/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Medio Ambiente",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-calidad-aire",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-calidad-aire/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-calidad-aire/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Climatología",
+    "descripcion": "Ontología para la representación de datos climatológicos. Ejemplos de uso concretos de la ontología de Sensores Medioambientales para magnitudes climatológicas.",
+    "prefijo": "edintmed",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-climatologia/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-climatologia/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Medio Ambiente",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-climatologia",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-climatologia/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-climatologia/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  },
+  {
+    "vocabulario": "Ontología de Sensores Medioambientales",
+    "descripcion": "Ontología para la representación de sensores ambientales urbanos y de las observaciones de clima, calidad ambiental y ruido. Extensión modular de SOSA y GeoSPARQL para infraestructuras de medición física.",
+    "prefijo": "edintmed",
+    "documentacion": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/refs/heads/main/documentation/index-en.html",
+    "formatos": [
+      {
+        "nombre": "HTML",
+        "url": "https://raw.githack.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/refs/heads/main/documentation/index-en.html"
+      }
+    ],
+    "dominio": "Medio Ambiente",
+    "recursos": [
+      {
+        "nombre": "Repositorio",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente",
+        "icon": "fab fa-github"
+      },
+      {
+        "nombre": "Issues",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/issues",
+        "icon": "fas fa-bug"
+      },
+      {
+        "nombre": "Requisitos",
+        "url": "https://github.com/EDINT-Ontologia/edint-ontologia-medio-ambiente/tree/main/requirements",
+        "icon": "fas fa-file-alt"
+      }
+    ]
+  }
 ]
