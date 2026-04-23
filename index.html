@@ -883,16 +883,17 @@
                     <table>
                         <thead>
                             <tr>
-                                <th style="width:22%">Vocabulario</th>
-                                <th style="width:34%">Descripción</th>
-                                <th style="width:10%">Prefijo</th>
-                                <th style="width:16%">Dominio</th>
+                                <th style="width:20%">Vocabulario</th>
+                                <th style="width:30%">Descripción</th>
+                                <th style="width:9%">Prefijo</th>
+                                <th style="width:13%">Dominio</th>
+                                <th style="width:10%">Formatos</th>
                                 <th style="width:18%">Recursos</th>
                             </tr>
                         </thead>
                         <tbody id="catalogo-tbody">
                             <tr class="loading-row">
-                                <td colspan="5">
+                                <td colspan="6">
                                     <div class="spinner"></div>
                                     Cargando ontologías…
                                 </td>
@@ -992,18 +993,21 @@
                 catTbody.innerHTML = '';
 
                 if (!ontData.length) {
-                    catTbody.innerHTML = emptyRow(5, 'No hay ontologías registradas aún.');
+                    catTbody.innerHTML = emptyRow(6, 'No hay ontologías registradas aún.');
                 } else {
                     ontData.forEach(item => {
                         const resources = (item.recursos || []).map(r =>
                             `<a href="${r.url}" class="resource-link" target="_blank"><i class="${r.icon}"></i>${r.nombre}</a>`
                         ).join('');
+                        const docUrl = item.documentacion || '#';
+                        const formatosHtml = `<a href="${docUrl}" class="resource-link" target="_blank" style="font-weight:600;"><i class="fas fa-file-code"></i>HTML</a>`;
                         const tr = document.createElement('tr');
                         tr.innerHTML = `
                             <td><span class="vocab-name">${item.vocabulario}</span></td>
                             <td><span class="vocab-desc">${item.descripcion}</span></td>
                             <td><span class="prefix-pill">${item.prefijo}</span></td>
                             <td><span class="domain-tag">${item.dominio}</span></td>
+                            <td><div class="resource-links">${formatosHtml}</div></td>
                             <td><div class="resource-links">${resources}</div></td>
                         `;
                         catTbody.appendChild(tr);
